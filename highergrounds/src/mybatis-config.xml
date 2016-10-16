@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="Order" type="dbcrew.highergrounds.web.Order" />
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				
+				<property name="driver" value="oracle.jdbc.OracleDriver" />
+				<property name="url"
+					value="jdbc:oracle:thin:@128.196.27.219:1521:MIS00" />
+				<property name="username" value="dbcrew" />
+				<property name="password" value="K.4xL0gP7" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="mapper.xml" />
+	</mappers>
+</configuration>
